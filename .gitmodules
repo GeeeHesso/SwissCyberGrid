@@ -1,0 +1,6 @@
+[submodule "AramisAPI.jl"]
+	path = AramisAPI.jl
+	url = https://github.com/GeeeHesso/AramisAPI.jl
+[submodule "AramisFrontend"]
+	path = AramisFrontend
+	url = https://github.com/GeeeHesso/AramisFrontend
