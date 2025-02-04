@@ -1,0 +1,30 @@
+# docker compose -f docker-compose.yml up -d --build --force-recreate
+
+services:
+  api:
+    container_name: swisscybergrid-api
+    build:
+      context: ./AramisAPI.jl
+    ports:
+      - '8080:8080'
+    networks:
+      - swisscybergrid
+    volumes:
+      - ./AramisAPI.jl:/app
+    restart: unless-stopped
+
+  frontend:
+    container_name: swisscybergrid-frontend
+    build:
+      context: ./AramisFrontend
+    ports:
+      - '4200:80'
+    networks:
+      - swisscybergrid
+    volumes:
+      - ./AramisFrontend:/app
+    restart: unless-stopped
+
+networks:
+  swisscybergrid:
+    driver: bridge
