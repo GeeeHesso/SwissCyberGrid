@@ -1,3 +1,5 @@
+# docker compose -f docker-compose-iig.yml up -d --build --force-recreate
+
 services:
   api:
     container_name: swisscybergrid-api
