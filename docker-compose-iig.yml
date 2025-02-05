@@ -16,11 +16,10 @@ services:
       - "traefik.http.routers.swisscybergrid-api.entrypoints=websecure"
       - "traefik.http.routers.swisscybergrid-api.tls.certresolver=tlsresolver"
 
-
   frontend:
     container_name: swisscybergrid-frontend
     build:
-      context: ./frontend
+      context: ./AramisFrontend
       dockerfile: Dockerfile
     networks:
       - swisscybergrid
